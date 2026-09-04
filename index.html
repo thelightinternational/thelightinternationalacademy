@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>The Light International Academy</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f7f9fc;
+        color: #17233c;
+        line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+        background-color: #ffffff;
+        padding: 18px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e5e9f0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+    }
+
+    .school-name {
+        font-size: 20px;
+        font-weight: bold;
+        color: #17233c;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #17233c;
+        margin-left: 25px;
+        font-weight: 600;
+    }
+
+    nav a:hover {
+        color: #c59b3d;
+    }
+
+    /* HERO */
+    .hero {
+        background: linear-gradient(135deg, #17233c, #263b62);
+        color: white;
+        text-align: center;
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        max-width: 750px;
+        margin: 0 auto 35px;
+        color: #e9edf5;
+    }
+
+    /* APPLY BUTTON */
+    .apply-button {
+        display: inline-block;
+        background-color: #c59b3d;
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 18px 45px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .apply-button:hover {
+        background-color: #a9822e;
+        transform: translateY(-2px);
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+        padding: 70px 8%;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 34px;
+        margin-bottom: 15px;
+        color: #17233c;
+    }
+
+    .section-description {
+        text-align: center;
+        max-width: 750px;
+        margin: 0 auto 45px;
+        color: #5f6b7a;
+    }
+
+    /* ABOUT */
+    .about {
+        background-color: white;
+    }
+
+    .about-content {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .about-content p {
+        font-size: 18px;
+        color: #4f5b6b;
+    }
+
+    /* PROGRAMS */
+    .programs {
+        background-color: #f7f9fc;
+    }
+
+    .program-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .program-card {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        border-top: 5px solid #c59b3d;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .program-card h3 {
+        color: #17233c;
+        margin-bottom: 12px;
+        font-size: 22px;
+    }
+
+    .program-card p {
+        color: #667085;
+    }
+
+    /* WHY US */
+    .why-us {
+        background-color: white;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .feature {
+        text-align: center;
+        padding: 25px;
+    }
+
+    .feature h3 {
+        margin-bottom: 10px;
+        color: #17233c;
+    }
+
+    .feature p {
+        color: #667085;
+    }
+
+    /* APPLICATION */
+    .application {
+        background-color: #17233c;
+        color: white;
+        text-align: center;
+    }
+
+    .application h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .application p {
+        max-width: 700px;
+        margin: 0 auto 30px;
+        color: #dce2ed;
+    }
+
+    /* CONTACT */
+    .contact {
+        background-color: #f7f9fc;
+        text-align: center;
+    }
+
+    .email-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 14px 30px;
+        border: 2px solid #17233c;
+        color: #17233c;
+        text-decoration: none;
+        border-radius: 7px;
+        font-weight: bold;
+    }
+
+    .email-button:hover {
+        background-color: #17233c;
+        color: white;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: #101a2d;
+        color: #cbd2df;
+        text-align: center;
+        padding: 25px;
+        font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+        header {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav a {
+            margin: 0 8px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+        .program-grid,
+        .features {
+            grid-template-columns: 1fr;
+        }
+
+        section {
+            padding: 55px 6%;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- HEADER -->
+<header>
+
+    <div class="logo-area">
+
+        <!--
+        Put your logo file in the same folder as this HTML file.
+        Rename your logo to "logo.png"
+        -->
+
+        <img src="logo.png" alt="The Light International Academy Logo" class="logo">
+
+        <div class="school-name">
+            The Light International Academy
+        </div>
+
+    </div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <h1>Learn. Grow. Shine.</h1>
+
+    <p>
+        A Cambridge-based international academy focused on
+        academic growth, individual learning, and preparing
+        students for their future.
+    </p>
+
+    <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSczhdT5Gk_h_OlfknDZ4SGmu68BihJG-oPpeQGf1ZXbbtK0kw/viewform?usp=header"
+        target="_blank"
+        class="apply-button">
+        APPLY NOW
+    </a>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="about-content">
+
+        <h2 class="section-title">About The Light International Academy</h2>
+
+        <p class="section-description">
+            The Light International Academy is a Cambridge-based school
+            dedicated to helping students develop academically,
+            personally, and confidently.
+        </p>
+
+        <p>
+            We believe every student learns differently. Our approach
+            focuses on individual growth, strong academic foundations,
+            and creating an environment where students can discover
+            their strengths and reach their potential.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PROGRAMS -->
+<section class="programs" id="programs">
+
+    <h2 class="section-title">Our Academic Programs</h2>
+
+    <p class="section-description">
+        Students progress through a structured Cambridge-based
+        education pathway from lower secondary through A Levels.
+    </p>
+
+
+    <div class="program-grid">
+
+        <div class="program-card">
+
+            <h3>Lower Secondary</h3>
+
+            <p>
+                <strong>Grades 7–9</strong>
+            </p>
+
+            <p>
+                Building strong academic foundations while helping
+                students develop confidence, independence, and
+                effective learning habits.
+            </p>
+
+        </div>
+
+
+        <div class="program-card">
+
+            <h3>IGCSE</h3>
+
+            <p>
+                <strong>Grades 10–11</strong>
+            </p>
+
+            <p>
+                Cambridge IGCSE education designed to develop
+                knowledge, critical thinking, problem-solving,
+                and preparation for advanced study.
+            </p>
+
+        </div>
+
+
+        <div class="program-card">
+
+            <h3>A Levels</h3>
+
+            <p>
+                <strong>AS Year 12 & A2 Year 13</strong>
+            </p>
+
+            <p>
+                Advanced Cambridge qualifications preparing
+                students for university and their chosen
+                future pathways.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY US -->
+<section class="why-us">
+
+    <h2 class="section-title">Why The Light?</h2>
+
+    <p class="section-description">
+        Education should be about more than grades.
+    </p>
+
+
+    <div class="features">
+
+        <div class="feature">
+
+            <h3>Individual Learning</h3>
+
+            <p>
+                We recognize that every student has different
+                strengths, goals, and learning needs.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h3>Academic Growth</h3>
+
+            <p>
+                We encourage students to challenge themselves,
+                develop their skills, and continuously improve.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h3>Cambridge Pathway</h3>
+
+            <p>
+                Students can progress through Lower Secondary,
+                IGCSE, AS, and A2 within a structured academic pathway.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APPLICATION -->
+<section class="application">
+
+    <h2>Ready to Begin Your Journey?</h2>
+
+    <p>
+        Take the next step toward joining The Light International Academy.
+        Complete our application form to begin the admissions process.
+    </p>
+
+    <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSczhdT5Gk_h_OlfknDZ4SGmu68BihJG-oPpeQGf1ZXbbtK0kw/viewform?usp=header"
+        target="_blank"
+        class="apply-button">
+        APPLY NOW
+    </a>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <p>
+        Have a question about admissions, programs, or the school?
+    </p>
+
+    <a
+        href="mailto:Admin@theliaacademy.com"
+        class="email-button">
+        Email The Academy
+    </a>
+
+    <p style="margin-top: 15px;">
+        Admin@theliaacademy.com
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 The Light International Academy.
+        All rights reserved.
+    </p>
+
+    <p>
+        Cambridge-based education focused on growth and individual learning.
+    </p>
+
+</footer>
+```
+
+</body>
+</html>
