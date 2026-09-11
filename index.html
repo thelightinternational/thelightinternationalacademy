@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>The Light International Academy</title>
+    <title>The Light International Academy</title>
 
 <style>
     * {
@@ -235,6 +234,52 @@
         color: white;
     }
 
+    /* SOCIAL MEDIA */
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: #17233c;
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .social-links a:hover {
+        background-color: #c59b3d;
+        transform: translateY(-3px);
+    }
+
+    .phone-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 14px 30px;
+        border: 2px solid #17233c;
+        color: #17233c;
+        text-decoration: none;
+        border-radius: 7px;
+        font-weight: bold;
+    }
+
+    .phone-button:hover {
+        background-color: #17233c;
+        color: white;
+    }
+
     /* FOOTER */
     footer {
         background-color: #101a2d;
@@ -275,13 +320,11 @@
         }
     }
 </style>
-```
 
 </head>
 
 <body>
 
-```
 <!-- HEADER -->
 <header>
 
@@ -514,6 +557,46 @@
         Admin@theliaacademy.com
     </p>
 
+    <!-- PHONE -->
+    <a
+        href="tel:+255765318086"
+        class="phone-button">
+        📞 +255 765 318 086
+    </a>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="social-links">
+
+        <!-- WhatsApp -->
+        <a
+            href="https://wa.me/255765318086"
+            target="_blank"
+            title="WhatsApp">
+            ☎
+        </a>
+
+        <!-- TikTok -->
+        <a
+            href="https://www.tiktok.com/@lia_international?_r=1&_t=ZS-99bqv1Lls5F"
+            target="_blank"
+            title="TikTok">
+            ♪
+        </a>
+
+        <!-- Instagram -->
+        <a
+            href="https://www.instagram.com/light_internationalacademy?stkn=bGN0ZWNheGtmN3Ry&utm_source=qr"
+            target="_blank"
+            title="Instagram">
+            ◎
+        </a>
+
+    </div>
+
+    <p style="margin-top: 15px; color: #5f6b7a;">
+        Connect with us on WhatsApp, TikTok, and Instagram.
+    </p>
+
 </section>
 
 
@@ -530,7 +613,6 @@
     </p>
 
 </footer>
-```
 
 </body>
 </html>
