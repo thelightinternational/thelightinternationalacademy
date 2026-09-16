@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -20,7 +21,6 @@
         line-height: 1.6;
     }
 
-    /* HEADER */
     header {
         background-color: #ffffff;
         padding: 18px 8%;
@@ -62,7 +62,6 @@
         color: #c59b3d;
     }
 
-    /* HERO */
     .hero {
         background: linear-gradient(135deg, #17233c, #263b62);
         color: white;
@@ -82,7 +81,6 @@
         color: #e9edf5;
     }
 
-    /* APPLY BUTTON */
     .apply-button {
         display: inline-block;
         background-color: #c59b3d;
@@ -100,7 +98,6 @@
         transform: translateY(-2px);
     }
 
-    /* GENERAL SECTIONS */
     section {
         padding: 70px 8%;
     }
@@ -119,7 +116,6 @@
         color: #5f6b7a;
     }
 
-    /* ABOUT */
     .about {
         background-color: white;
     }
@@ -135,7 +131,6 @@
         color: #4f5b6b;
     }
 
-    /* PROGRAMS */
     .programs {
         background-color: #f7f9fc;
     }
@@ -146,6 +141,7 @@
         gap: 25px;
         max-width: 1100px;
         margin: auto;
+        align-items: start;
     }
 
     .program-card {
@@ -166,7 +162,58 @@
         color: #667085;
     }
 
-    /* WHY US */
+    /* FUTURE SKILLS SLIDE */
+
+    .future-skills-card {
+        grid-column: 1 / -1;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .future-skills-header {
+        padding: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .future-skills-header h3 {
+        margin-bottom: 5px;
+    }
+
+    .future-skills-header p {
+        margin: 0;
+    }
+
+    .slide-arrow {
+        font-size: 28px;
+        color: #c59b3d;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .future-skills-card.active .slide-arrow {
+        transform: rotate(180deg);
+    }
+
+    .future-skills-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        padding: 0 30px;
+    }
+
+    .future-skills-card.active .future-skills-content {
+        max-height: 1200px;
+        padding: 0 30px 30px;
+    }
+
+    .future-skills-content p {
+        margin-bottom: 18px;
+    }
+
     .why-us {
         background-color: white;
     }
@@ -193,7 +240,6 @@
         color: #667085;
     }
 
-    /* APPLICATION */
     .application {
         background-color: #17233c;
         color: white;
@@ -211,13 +257,13 @@
         color: #dce2ed;
     }
 
-    /* CONTACT */
     .contact {
         background-color: #f7f9fc;
         text-align: center;
     }
 
-    .email-button {
+    .email-button,
+    .phone-button {
         display: inline-block;
         margin-top: 20px;
         padding: 14px 30px;
@@ -228,12 +274,32 @@
         font-weight: bold;
     }
 
-    .email-button:hover {
+    .email-button:hover,
+    .phone-button:hover {
         background-color: #17233c;
         color: white;
     }
 
-    /* SOCIAL MEDIA */
+    /* NEWSLETTER */
+
+    .newsletter-button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 16px 35px;
+        background-color: #c59b3d;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .newsletter-button:hover {
+        background-color: #a9822e;
+        transform: translateY(-2px);
+    }
+
     .social-links {
         display: flex;
         justify-content: center;
@@ -267,23 +333,6 @@
         object-fit: contain;
     }
 
-    .phone-button {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 14px 30px;
-        border: 2px solid #17233c;
-        color: #17233c;
-        text-decoration: none;
-        border-radius: 7px;
-        font-weight: bold;
-    }
-
-    .phone-button:hover {
-        background-color: #17233c;
-        color: white;
-    }
-
-    /* FOOTER */
     footer {
         background-color: #101a2d;
         color: #cbd2df;
@@ -292,7 +341,6 @@
         font-size: 14px;
     }
 
-    /* MOBILE */
     @media (max-width: 800px) {
 
         header {
@@ -318,6 +366,10 @@
             grid-template-columns: 1fr;
         }
 
+        .future-skills-card {
+            grid-column: auto;
+        }
+
         section {
             padding: 55px 6%;
         }
@@ -328,11 +380,8 @@
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
-```
 <div class="logo-area">
 
     <img alt="The Light International Academy Logo" class="logo" src="logo.png"/>
@@ -348,15 +397,11 @@
     <a href="#programs">Programs</a>
     <a href="#contact">Contact</a>
 </nav>
-```
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
 
-```
 <h1>Learn. Grow. Shine.</h1>
 
 <p>
@@ -368,15 +413,11 @@
 <a class="apply-button" href="https://docs.google.com/forms/d/e/1FAIpQLSczhdT5Gk_h_OlfknDZ4SGmu68BihJG-oPpeQGf1ZXbbtK0kw/viewform?usp=header" target="_blank">
     APPLY NOW
 </a>
-```
 
 </section>
 
-<!-- ABOUT -->
-
 <section class="about" id="about">
 
-```
 <div class="about-content">
 
     <h2 class="section-title">About The Light International Academy</h2>
@@ -395,15 +436,11 @@
     </p>
 
 </div>
-```
 
 </section>
 
-<!-- PROGRAMS -->
-
 <section class="programs" id="programs">
 
-```
 <h2 class="section-title">Our Academic Programs</h2>
 
 <p class="section-description">
@@ -412,8 +449,6 @@
 </p>
 
 <div class="program-grid">
-
-    <!-- LOWER SECONDARY -->
 
     <div class="program-card">
 
@@ -429,8 +464,6 @@
 
     </div>
 
-    <!-- IGCSE -->
-
     <div class="program-card">
 
         <h3>IGCSE</h3>
@@ -444,8 +477,6 @@
         </p>
 
     </div>
-
-    <!-- A LEVELS -->
 
     <div class="program-card">
 
@@ -461,69 +492,77 @@
 
     </div>
 
-    <!-- FUTURE SKILLS ACADEMY -->
+    <div class="program-card future-skills-card">
 
-    <div class="program-card">
+        <div class="future-skills-header" onclick="toggleFutureSkills()">
 
-        <h3>Future Skills Academy</h3>
+            <div>
+                <h3>Future Skills Academy</h3>
 
-        <p>
-            <strong>Professional Short Courses</strong>
-        </p>
+                <p>
+                    <strong>Professional Short Courses</strong>
+                </p>
 
-        <p>
-            Evening &amp; Weekend Programmes designed to build
-            practical skills for a changing world.
-        </p>
+                <p>
+                    Evening &amp; Weekend Programmes designed to build
+                    practical skills for a changing world.
+                </p>
+            </div>
 
-        <p>
-            <strong>Technology:</strong>
-            AI for Business &amp; Professionals,
-            Digital Marketing &amp; Social Media Management,
-            Excel &amp; Data Analysis,
-            Canva &amp; Graphic Design,
-            Website Creation Without Coding,
-            AI Automation for Small Businesses,
-            Coding &amp; Web Development,
-            and Cybersecurity Awareness.
-        </p>
+            <div class="slide-arrow">
+                ↓
+            </div>
 
-        <p>
-            <strong>Business:</strong>
-            Entrepreneurship &amp; Business Start-up,
-            Small Business Management,
-            Business Accounting for Non-Accountants,
-            Sales &amp; Customer Service,
-            Business Finance &amp; Financial Literacy,
-            Business Strategy &amp; Marketing,
-            Business Communication,
-            and E-Commerce &amp; Online Business.
-        </p>
+        </div>
 
-        <p>
-            <strong>Career:</strong>
-            Professional English &amp; Business Communication,
-            Public Speaking &amp; Presentation Skills,
-            Leadership &amp; Management,
-            CV, LinkedIn &amp; Job Search Mastery,
-            Interview Skills &amp; Career Preparation,
-            Workplace Professionalism,
-            Project Management Fundamentals,
-            and Personal Branding &amp; Professional Development.
-        </p>
+        <div class="future-skills-content">
+
+            <p>
+                <strong>Technology:</strong>
+                AI for Business &amp; Professionals,
+                Digital Marketing &amp; Social Media Management,
+                Excel &amp; Data Analysis,
+                Canva &amp; Graphic Design,
+                Website Creation Without Coding,
+                AI Automation for Small Businesses,
+                Coding &amp; Web Development,
+                and Cybersecurity Awareness.
+            </p>
+
+            <p>
+                <strong>Business:</strong>
+                Entrepreneurship &amp; Business Start-up,
+                Small Business Management,
+                Business Accounting for Non-Accountants,
+                Sales &amp; Customer Service,
+                Business Finance &amp; Financial Literacy,
+                Business Strategy &amp; Marketing,
+                Business Communication,
+                and E-Commerce &amp; Online Business.
+            </p>
+
+            <p>
+                <strong>Career:</strong>
+                Professional English &amp; Business Communication,
+                Public Speaking &amp; Presentation Skills,
+                Leadership &amp; Management,
+                CV, LinkedIn &amp; Job Search Mastery,
+                Interview Skills &amp; Career Preparation,
+                Workplace Professionalism,
+                Project Management Fundamentals,
+                and Personal Branding &amp; Professional Development.
+            </p>
+
+        </div>
 
     </div>
 
 </div>
-```
 
 </section>
 
-<!-- WHY US -->
-
 <section class="why-us">
 
-```
 <h2 class="section-title">Why The Light?</h2>
 
 <p class="section-description">
@@ -566,15 +605,11 @@
     </div>
 
 </div>
-```
 
 </section>
 
-<!-- APPLICATION -->
-
 <section class="application">
 
-```
 <h2>Ready to Begin Your Journey?</h2>
 
 <p>
@@ -585,15 +620,11 @@
 <a class="apply-button" href="https://docs.google.com/forms/d/e/1FAIpQLSczhdT5Gk_h_OlfknDZ4SGmu68BihJG-oPpeQGf1ZXbbtK0kw/viewform?usp=header" target="_blank">
     APPLY NOW
 </a>
-```
 
 </section>
 
-<!-- CONTACT -->
-
 <section class="contact" id="contact">
 
-```
 <h2 class="section-title">Contact Us</h2>
 
 <p>
@@ -608,38 +639,22 @@
     Admin@theliaacademy.com
 </p>
 
-<!-- PHONE -->
-
 <a class="phone-button" href="tel:+255765318086">
     📞 +255 765 318 086
 </a>
 
-<!-- SOCIAL MEDIA -->
-
 <div class="social-links">
 
-    <!-- WhatsApp -->
-
     <a href="https://wa.me/255765318086" rel="noopener noreferrer" target="_blank" title="WhatsApp">
-
         <img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"/>
-
     </a>
-
-    <!-- TikTok -->
 
     <a href="https://www.tiktok.com/@lia_international?_r=1&amp;_t=ZS-99bqv1Lls5F" rel="noopener noreferrer" target="_blank" title="TikTok">
-
         <img alt="TikTok" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg"/>
-
     </a>
 
-    <!-- Instagram -->
-
     <a href="https://www.instagram.com/light_internationalacademy?stkn=bGN0ZWNheGtmN3Ry&amp;utm_source=qr" rel="noopener noreferrer" target="_blank" title="Instagram">
-
         <img alt="Instagram" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"/>
-
     </a>
 
 </div>
@@ -647,15 +662,26 @@
 <p style="margin-top: 15px; color: #5f6b7a;">
     Connect with us on WhatsApp, TikTok, and Instagram.
 </p>
-```
+
+<h2 style="margin-top: 45px; color: #17233c;">
+    Join Our Newsletter
+</h2>
+
+<p style="margin-top: 10px; color: #5f6b7a;">
+    Stay updated with school news, programs, events, and opportunities.
+</p>
+
+<a class="newsletter-button"
+   href="https://3fdf0d66.sibforms.com/serve/MUIFAE0OKjHQdooAc-r5_oEpgf023WNPuvKUxaRbyGJSi6y1ypoPZQrY3EO1kJt2kQvNRtlNcbmKlwnmhvXlbAAq_H0QTEg9x528rGWDBq0rUN2gf7MwPq-l5EMHFmzLOcn5LbA8HOY7BIjTteP9U0wZx78GGJnVPsBbsylj-lnxOJ2ct7RQfFyz2u5s-i76azgI9Fp45FsZAsdhUg=="
+   target="_blank"
+   rel="noopener noreferrer">
+    JOIN OUR NEWSLETTER
+</a>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-```
 <p>
     © 2026 The Light International Academy.
     All rights reserved.
@@ -664,9 +690,16 @@
 <p>
     Cambridge-based education focused on growth and individual learning.
 </p>
-```
 
 </footer>
 
+<script>
+function toggleFutureSkills() {
+    const card = document.querySelector(".future-skills-card");
+    card.classList.toggle("active");
+}
+</script>
+
 </body>
 </html>
+```
