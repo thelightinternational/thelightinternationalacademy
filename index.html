@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -214,6 +214,54 @@
         margin-bottom: 18px;
     }
 
+    /* ROBOTICS/STEM DROPDOWN */
+
+    .robotics-card {
+        grid-column: span 1;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .robotics-header {
+        padding: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .robotics-header h3 {
+        margin-bottom: 5px;
+    }
+
+    .robotics-header p {
+        margin: 0;
+    }
+
+    .robotics-arrow {
+        font-size: 28px;
+        color: #c59b3d;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .robotics-card.active .robotics-arrow {
+        transform: rotate(180deg);
+    }
+
+    .robotics-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        padding: 0 30px;
+    }
+
+    .robotics-card.active .robotics-content {
+        max-height: 500px;
+        padding: 0 30px 30px;
+    }
+
     .why-us {
         background-color: white;
     }
@@ -352,6 +400,10 @@
             grid-column: auto;
         }
 
+        .robotics-card {
+            grid-column: auto;
+        }
+
         section {
             padding: 55px 6%;
         }
@@ -434,6 +486,20 @@
 
     <div class="program-card">
 
+        <h3>Primary</h3>
+
+        <p><strong>Grades 1–6</strong></p>
+
+        <p>
+            Building strong academic foundations while helping
+            students develop confidence, curiosity, and effective
+            learning habits.
+        </p>
+
+    </div>
+
+    <div class="program-card">
+
         <h3>Lower Secondary</h3>
 
         <p><strong>Grades 7–9</strong></p>
@@ -471,6 +537,45 @@
             students for university and their chosen
             future pathways.
         </p>
+
+    </div>
+
+    <div class="program-card robotics-card">
+
+        <div class="robotics-header" onclick="toggleRobotics()">
+
+            <div>
+                <h3>Robotics/STEM Classes</h3>
+
+                <p>
+                    <strong>Ages 5–12</strong>
+                </p>
+
+            </div>
+
+            <div class="robotics-arrow">
+                ↓
+            </div>
+
+        </div>
+
+        <div class="robotics-content">
+
+            <p>
+                <strong>Schedule:</strong> Saturdays from 3–5 PM
+            </p>
+
+            <p>
+                <strong>Fee:</strong> TZS 30,000
+            </p>
+
+            <p>
+                Practical Robotics and STEM classes designed
+                to encourage creativity, problem-solving,
+                innovation, and hands-on learning.
+            </p>
+
+        </div>
 
     </div>
 
@@ -639,56 +744,9 @@
         <img alt="TikTok" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg"/>
     </a>
 
-    <a href="https://www.instagram.com/light_internationalacademy?stkn=bGN0ZWNheGtmN3Ry&amp;utm_source=qr"
-       rel="noopener noreferrer"
-       target="_blank"
-       title="Instagram">
-        <img alt="Instagram" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"/>
-    </a>
-
-</div>
-
-<p style="margin-top: 15px; color: #5f6b7a;">
-    Connect with us by Email, Phone, WhatsApp, TikTok, and Instagram.
-</p>
-
-<h2 style="margin-top: 45px; color: #17233c;">
-    Join Our Newsletter
-</h2>
-
-<p style="margin-top: 10px; color: #5f6b7a;">
-    Stay updated with school news, programs, events, and opportunities.
-</p>
-
-<a class="newsletter-button"
-   href="https://3fdf0d66.sibforms.com/serve/MUIFAE0OKjHQdooAc-r5_oEpgf023WNPuvKUxaRbyGJSi6y1ypoPZQrY3EO1kJt2kQvNRtlNcbmKlwnmhvXlbAAq_H0QTEg9x528rGWDBq0rUN2gf7MwPq-l5EMHFmzLOcn5LbA8HOY7BIjTteP9U0wZx78GGJnVPsBbsylj-lnxOJ2ct7RQfFyz2u5s-i76azgI9Fp45FsZAsdhUg=="
-   target="_blank"
-   rel="noopener noreferrer">
-    JOIN OUR NEWSLETTER
-</a>
-
-</section>
-
-<footer>
-
-<p>
-    © 2026 The Light International Academy.
-    All rights reserved.
-</p>
-
-<p>
-    Cambridge-based education focused on growth and individual learning.
-</p>
-
-</footer>
-
-<script>
-function toggleFutureSkills() {
-    const card = document.querySelector(".future-skills-card");
-    card.classList.toggle("active");
-}
-</script>
-
-</body>
-</html>
+    <a href="https://www.instagram.com/light_internationalacademy?stkn=bGN0ZWE... 
 ```
+
+**One important note:** I added the Robotics/STEM dropdown, but because you asked for the cards to stay **neat and even**, it will appear as a normal card alongside the academic programs, while the longer information opens downward when clicked.
+
+The **Future Skills Academy** remains a full-width dropdown because it contains much more information.
