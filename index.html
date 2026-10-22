@@ -354,7 +354,71 @@
         section {
             padding: 55px 6%;
         }
-    }
+    }/* Overlapping circular images in the hero section */
+.hero-images {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 55px auto 10px;
+padding: 20px 0;
+max-width: 600px;
+}
+
+.hero-images img {
+width: 170px;
+height: 170px;
+object-fit: cover;
+border-radius: 50%;
+border: 5px solid #ffffff;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+margin-left: -30px;
+position: relative;
+transition: transform 0.3s ease;
+}
+
+.hero-images img:first-child {
+margin-left: 0;
+z-index: 1;
+}
+
+.hero-images img:nth-child(2) {
+transform: translateY(-20px);
+z-index: 3;
+}
+
+.hero-images img:nth-child(3) {
+transform: translateY(15px);
+z-index: 2;
+}
+
+/* Hover effect */
+.hero-images img:hover {
+transform: translateY(-10px) scale(1.05);
+z-index: 10;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+.hero-images {
+margin-top: 35px;
+padding: 15px 0;
+}
+
+
+.hero-images img {
+    width: 110px;
+    height: 110px;
+    margin-left: -20px;
+    border-width: 3px;
+}
+
+.hero-images img:first-child {
+    margin-left: 0;
+}
+
+
+}
+
 </style>
 
 </head>
@@ -394,6 +458,15 @@
 <a class="apply-button" href="https://docs.google.com/forms/d/e/1FAIpQLSczhdT5Gk_h_OlfknDZ4SGmu68BihJG-oPpeQGf1ZXbbtK0kw/viewform?usp=header" target="_blank">
     APPLY NOW
 </a>
+<div class="hero-images">
+
+<img src="lab.jpg" alt="Students participating in laboratory activities">
+
+<img src="learning.jpg" alt="Students learning at The Light International Academy">
+
+<img src="random.jpg" alt="School life at The Light International Academy">
+
+</div>
 
 </section>
 
